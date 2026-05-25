@@ -15,8 +15,8 @@ public class EmailGeneratorService {
     private final String apiKey;
 
     public EmailGeneratorService(WebClient.Builder webClientBuilder,
-                                 @Value("https://generativelanguage.googleapis.com") String baseUrl,
-                                 @Value("AIzaSyAYhrTgB1ztAT6oA3tArPQB6-7hgOjm8CY") String geminiApiKey) {
+                                 @Value("GEMINI_KEY_URL") String baseUrl,
+                                 @Value("${GEMINI_API_KEY}") String geminiApiKey) {
 
         this.apiKey = geminiApiKey;
         this.webClient = webClientBuilder.baseUrl(baseUrl)
